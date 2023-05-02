@@ -1,0 +1,349 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* dark/light theme preference*/
+body {
+  --text-color: #222;
+  --bkg-color: #fff;
+  --card-color: #6b6b6b;
+}
+/* Dark theme colors */
+body.dark-theme {
+  --text-color: #eee;
+  --bkg-color: #121212;
+  --card-color: #3b3b3b;
+}
+@media (prefers-color-scheme: dark) {
+  /* Dark theme styles go here */
+  /* defaults to dark theme */
+  body {
+    --text-color: #eee;
+    --bkg-color: #525252;
+    --card-color: #3b3b3b;
+    --btn-src: url("src/moon.svg");
+  }
+  /* Override dark mode with light mode styles if the user decides to swap */
+  body.light-theme {
+    --text-color: #222;
+    --bkg-color: #fff;
+    --card-color: #dedede;
+    --btn-src: url("src/sun.svg");
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  /* Light theme styles go here */
+}
+body {
+  background-color: var(--bkg-color);
+  color: var(--text-color);
+}
+.theme-toggle {
+  background-color: #b0b0b0; /* Green */
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0;
+}
+#btnImg {
+  content: var(--btn-src);
+  cursor: pointer;
+  background: #b0b0b0;
+}
+
+.navbar {
+  background-color: #b0b0b0;
+  padding: 26px;
+  text-align: center;
+  width: 100%;
+  /* Pay special attention here! */
+  position: sticky;
+  top: 0px;
+  z-index: 99;
+}
+
+.navbar .page-link {
+  float: right;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+.navbar .page-link a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+.navbar .page-link a:hover {
+  text-decoration: underline;
+}
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name {
+  color: #ffb52e;
+}
+
+.footer {
+  /*position: absolute;
+  bottom: 0;*/
+  width: 100%;
+  height: 2.5rem;
+  margin-top: 2rem;
+}
+
+.projectCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "left right"
+    "left bottom";
+  background-color: var(--card-color);
+}
+.projectLeft {
+  grid-area: left;
+}
+.projectRight {
+  grid-area: right;
+}
+.projectBottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  grid-area: bottom;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.projectCard .projectLeft,
+.projectCard .projectRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  width: 100vh;
+  height: 500px;
+  margin: 10px;
+  border: 2px solid black;
+}
+ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 500px;
+  list-style: none;
+}
+ul li {
+  position: relative;
+  /*display: block;*/
+  float: left;
+  margin: 0;
+  padding: 0;
+  /*width: 800px;*/
+  height: 500px;
+}
+
+.btn {
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 40%;
+  z-index: 99;
+  display: block;
+  padding: 3%;
+  border-radius: 50%;
+  width: auto;
+  height: auto;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  opacity: 0.8;
+  cursor: pointer;
+  border: 1px solid black;
+}
+.next {
+  right: 0;
+}
+/*mobile*/
+@media screen and (max-width: 769px) {
+  header {
+    margin: 5rem;
+  }
+  #about {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar .page-link {
+    gap: 0.2rem;
+  }
+  .navbar .page-link a {
+    margin: 0px 2px;
+  }
+  #contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .left-footer {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .left-footer a img {
+    width: 2rem;
+  }
+  .contactBtn {
+    border: 3px solid #fee050;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--bkg-color);
+    color: var(--text-color);
+    text-decoration: none;
+  }
+  .projectCard .projectBottom a img {
+    width: 2rem;
+  }
+  .slider {
+    width: 20rem;
+    height: 28rem;
+  }
+  .projectCard {
+    width: 20rem;
+    height: 20rem;
+  }
+}
+/*desktop*/
+@media screen and (min-width: 769px) {
+  header {
+    margin: 5rem 18rem;
+  }
+  .navbar .page-link {
+    gap: 1.52rem;
+  }
+  .navbar .page-link a {
+    margin: 0px 10px;
+  }
+  #about {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+  }
+  header section div img {
+    width: 20rem;
+  }
+  .intro p {
+    font-size: 1.2rem;
+  }
+  #contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .left-footer {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-left: 5rem;
+  }
+  .left-footer a img {
+    cursor: pointer;
+    width: 2.5rem;
+  }
+  .right-footer {
+    margin-right: 30rem;
+  }
+  .contactBtn {
+    border: 5px solid #fee050;
+    padding: 0.8rem 2rem;
+    background-color: var(--bkg-color);
+    color: var(--text-color);
+    text-decoration: none;
+  }
+  .projectCard .projectBottom a img {
+    cursor: pointer;
+    width: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .right-footer {
+    margin-right: 10rem;
+  }
+  .footer #contact .right-footer .contactBtn {
+    padding: 0.5rem 1rem;
+  }
+}

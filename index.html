@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">    
+    <script src="https://unpkg.com/akar-icons-fonts"></script>
+    <script src="script.js" defer></script>
+    <title>Dũng's Portfolio</title>
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="src/icon/favicon.ico">
+</head>
+<body>
+    <!--navbar for easy access-->
+    <nav class="navbar">
+        <div class="page-link">
+            <a href="#">HOME</a>
+            <a href="#about" >ABOUT</a>
+            <a href="#project" >PROJECT</a>
+            <a href="#contact" >CONTACT</a>
+            <button class="theme-toggle" id="theme-toggle">
+                <img src="src/moon.svg" alt="theme switcher" id="btnImg">
+            </button>
+        </div>
+    </nav>
+   <!--header for introduction--> 
+    <header>
+        <section id="about">        
+            <div class="gif">
+                <img src="src/bongo-cat.gif" alt="bongo cat typing">
+            </div>
+            <div class="intro">
+                <h1>
+                    Hi! I'm <span class="name">Dũng</span> 👋
+                </h1>
+                <p>
+                    I'm a begnning <span style="color: #FF69B4;">Front End</span> developer.
+                    <p>
+                        I'm passionate about building good looking, easy to access website.
+                    </p>
+                </p>
+            </div>
+        </section>
+    </header>
+    <!--main content display project-->
+    <main>
+        <h2 style="color: rgb(251 146 60);margin-bottom: 2rem;">PROJECTS</h2>
+        <section id="project" class="slider">
+            <ul>
+            <li class="projectCard">
+                <div class="projectLeft">
+                    <img src="src/projectImg/calculator.png" alt="calculator app image">
+                </div>
+                <div class="projectRight">
+                    <h3 class="projectName">Calculator</h3>
+                    <p class="projectDes">A calculator simulator using html, css and javascript</p>
+                </div>
+                <div class="projectBottom">
+                    <div class="flex">
+                    <label for=".githubLink">Source code</label>
+                    <a href="https://github.com/dung8466/calculator" class="githubLink" target="_blank">
+                        <img src="src/github-mark.svg" alt="github link to source code">
+                    </a>
+                    </div>
+                    <div class="flex">
+                    <label for=".liveWeb">Web</label>
+                    <a href="https://dung8466.github.io/calculator/" class="liveWeb" target="_blank">
+                        <img src="src/share.svg" alt="live link">
+                    </a>
+                    </div>
+                </div>
+            </li>
+            <li class="projectCard">
+                <div class="projectLeft">
+                    <img src="src/projectImg/etchASketch.png" alt="etch a sketch app image">
+                </div>
+                <div class="projectRight">
+                    <h3 class="projectName">Etch A Sketch</h3>
+                    <p class="projectDes">Unlinke real life etch a sketch, you can draw anything using mouse hover.</p>
+                </div>
+                <div class="projectBottom">
+                    <div class="flex">
+                    <label for=".githubLink">Source code</label>
+                    <a href="https://github.com/dung8466/etch-a-sketch" class="githubLink" target="_blank">
+                        <img src="src/github-mark.svg" alt="github link to source code">
+                    </a>
+                    </div>
+                    <div class="flex">
+                    <label for=".liveWeb">Web</label>
+                    <a href="https://dung8466.github.io/etch-a-sketch/" class="liveWeb" target="_blank">
+                        <img src="src/share.svg" alt="live link">
+                    </a>
+                    </div>
+                </div>
+            </li>
+            <li class="projectCard">
+                <div class="projectLeft">
+                    <img src="src/projectImg/RPS.png" alt="rock paper scissors game">
+                </div>
+                <div class="projectRight">
+                    <h3 class="projectName">Rock Paper Scissors</h3>
+                    <p class="projectDes">In this game, you will play rock-paper-scissors against computer
+                    </p>
+                </div>
+                <div class="projectBottom">
+                    <div class="flex">
+                    <label for="githubLink">Source code</label>
+                    <a href="https://github.com/dung8466/RPS" class="githubLink" target="_blank">
+                        <img src="src/github-mark.svg" alt="github link to source code">
+                    </a>
+                    </div>
+                    <div class="flex">
+                    <label for="liveWeb">Web</label>
+                    <a href="https://dung8466.github.io/RPS/" class="liveWeb" target="_blank">
+                        <img src="src/share.svg" alt="live link">
+                    </a>
+                    </div>
+                </div>
+            </li>
+            </ul>
+            <div class="navigation">
+                <div class="btn pre">
+                    <img src="src/chevrons-left.svg" alt="previous button">
+                </div>
+                <div class="btn next">
+                    <img src="src/chevrons-right.svg" alt="next button">
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--footer for display social link and contact-->
+    <footer class="footer">
+        <section id="contact">
+            <div class="left-footer">
+                <a href="https://github.com/dung8466" target="_blank">
+                    <img src="src/github-mark.svg" alt="github link">
+                </a>
+                <a href="https://www.linkedin.com/in/d%C5%A9ng-nguy%E1%BB%85n-ti%E1%BA%BFn-328829225/" target="_blank">
+                    <img src="src/linkedin.svg" alt="linkedin link">
+                </a>
+                <a href="https://codepen.io/dung8466" target="_blank">
+                    <img src="src/codepen.svg" alt="codepen link">
+                </a>
+                <a href="">
+                    <img src="src/instagram.svg" alt="instagram link">
+                </a>
+            </div>
+            <div class="right-footer">
+                <a href="mailto:ntd8466@gmail.com" class="contactBtn">CONTACT ME</a>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>
